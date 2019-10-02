@@ -1,0 +1,61 @@
+package excepcion;
+
+import javax.swing.JOptionPane;
+
+public class Excepcion {
+    public static void main(String[] args) {
+        //nu();
+        //num();
+        numero();
+    }
+    public static void nu(){
+        int a,b;
+        double result = 0;
+        a= Integer.parseInt(JOptionPane.showInputDialog("digite un numero: "));
+        b= Integer.parseInt(JOptionPane.showInputDialog("digite el divisor: ")); 
+        try {
+        result= a/b;
+		  
+        
+    } catch (ArithmeticException ex) {
+        System.out.println("operacion invalida no se puede "+ex.getMessage());
+    }
+        System.out.println("resultado: "+result);
+    }
+    public static void num(){
+        int a = 0,b = 0;
+        String h,s;
+        double result = 0;             
+        h= JOptionPane.showInputDialog("digite un numero: ");
+        s= JOptionPane.showInputDialog("digite el divisor: "); 
+    try{ 
+        a=Integer.parseInt(h);
+        b=Integer.parseInt(s);
+    }catch(NumberFormatException ex){
+        System.out.println("No es un número, es una cadena de texto."+ex.getMessage());
+    }
+    try {
+        result= a/b;
+    } catch (ArithmeticException ex) {
+        System.out.println("operacion invalida no se puede "+ex.getMessage());
+    }
+        System.out.println("resultado:"+result);
+    
+    
+}
+    public static void numero() {
+        Myhelper h = new Myhelper();
+         int a,b;
+        double result = 0;
+        a= Integer.parseInt(JOptionPane.showInputDialog("digite un numero: "));
+        b= Integer.parseInt(JOptionPane.showInputDialog("digite el divisor: ")); 
+        try {
+        h.numeros(a);
+        
+    } catch (Miexcepcion ex) {
+        ex.printStackTrace();
+    }
+        System.out.println("resultado: "+result);
+    
+    }
+}
