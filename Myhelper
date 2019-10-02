@@ -1,0 +1,11 @@
+package excepcion;
+public class Myhelper {
+    Myhelper(){
+        
+    }
+    public void numeros(int a)throws Miexcepcion{
+        if (a<10){
+            throw new Miexcepcion("el valor debe ser mayor a 10");
+        }
+    }
+}
