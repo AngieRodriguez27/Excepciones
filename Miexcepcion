@@ -1,0 +1,7 @@
+package excepcion;
+public class Miexcepcion extends Exception{
+    public static final long serialVersionUID = 700L;
+    public Miexcepcion(String mensaje){
+        super(mensaje);
+    }
+}
